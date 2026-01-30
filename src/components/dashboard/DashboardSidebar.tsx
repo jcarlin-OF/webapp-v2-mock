@@ -60,7 +60,7 @@ export function DashboardSidebar({ items, className }: DashboardSidebarProps) {
 // Pre-defined nav items for client and expert dashboards
 export const clientNavItems: NavItem[] = [
   { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-  { label: 'AI Match', href: '/ai-match', icon: Sparkles },
+  { label: 'AI Match', href: '/dashboard/ai-match', icon: Sparkles },
   { label: 'Messages', href: '/dashboard/messages', icon: MessageSquare },
   { label: 'Expert Requests', href: '/dashboard/requests', icon: FileSearch },
   { label: 'My Calls', href: '/dashboard/calls', icon: Calendar },
