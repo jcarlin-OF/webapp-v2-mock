@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 160 8% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 8% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 8% 10%;
+
+    --primary: 179 100% 17%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 68% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 150 5% 96%;
+    --muted-foreground: 155 6% 45%;
+
+    --accent: 168 100% 46%;
+    --accent-foreground: 179 100% 17%;
+
+    --destructive: 347 78% 61%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 5% 90%;
+    --input: 150 5% 90%;
+    --ring: 179 100% 17%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 160 8% 10%;
+    --foreground: 150 5% 96%;
+
+    --card: 160 7% 13%;
+    --card-foreground: 150 5% 96%;
+
+    --popover: 160 7% 13%;
+    --popover-foreground: 150 5% 96%;
+
+    --primary: 168 100% 46%;
+    --primary-foreground: 179 100% 17%;
+
+    --secondary: 200 68% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 160 6% 20%;
+    --muted-foreground: 150 5% 60%;
+
+    --accent: 168 100% 46%;
+    --accent-foreground: 179 100% 17%;
+
+    --destructive: 347 78% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 6% 25%;
+    --input: 160 6% 25%;
+    --ring: 168 100% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer components {
+  /* Brand-specific component classes */
+  .container-page {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-light;
+  }
+
+  .gradient-hero {
+    @apply bg-gradient-to-br from-primary-dark via-primary to-primary-light;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  /* Card variants */
+  .card-interactive {
+    @apply bg-white rounded-xl shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-xl shadow-elevated;
+  }
+
+  /* Focus states */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Badge variants */
+  .badge-primary {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary;
+  }
+
+  .badge-secondary {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success/10 text-success;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: slideUp 0.5s ease-out;
+  }
+}
